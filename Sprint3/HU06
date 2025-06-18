@@ -1,0 +1,11 @@
+Feature: Recomendaciones personalizadas
+
+  Scenario: Generar recomendaciones basadas en el historial de actividad
+    Given que el usuario ha registrado actividades físicas en la aplicación
+    When accede a la sección de “Recomendaciones”
+    Then se le muestran sugerencias personalizadas para mejorar su desempeño o salud
+
+  Scenario: Actualizar recomendaciones tras nueva actividad
+    Given que el usuario ha realizado una nueva sesión de ejercicio
+    When la actividad es registrada exitosamente
+    Then el sistema recalcula y actualiza las recomendaciones en base a los nuevos datos

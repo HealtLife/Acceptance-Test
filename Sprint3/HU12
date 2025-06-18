@@ -1,0 +1,11 @@
+Feature: Seguimiento de hidratación diaria
+
+  Scenario: Registrar consumo de agua
+    Given que el usuario se encuentra en la sección de “Hidratación”
+    When ingresa la cantidad de agua consumida en mililitros
+    Then la aplicación actualiza el contador de consumo diario
+
+  Scenario: Notificar metas de hidratación alcanzadas
+    Given que el usuario tiene una meta diaria de hidratación establecida
+    When el consumo total de agua alcanza o supera la meta
+    Then la aplicación muestra una notificación de logro

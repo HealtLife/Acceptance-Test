@@ -1,0 +1,11 @@
+Feature: Registro de ingesta de alimentos
+
+  Scenario: Registrar un nuevo alimento consumido
+    Given que el usuario accede a la sección de “Ingesta de alimentos”
+    When ingresa el nombre del alimento, porción y hora de consumo
+    Then la aplicación guarda el registro y actualiza el conteo de calorías y nutrientes diarios
+
+  Scenario: Visualizar resumen nutricional diario
+    Given que el usuario ha registrado múltiples alimentos durante el día
+    When accede al resumen de ingesta
+    Then la aplicación muestra un desglose de calorías, proteínas, carbohidratos y grasas consumidas

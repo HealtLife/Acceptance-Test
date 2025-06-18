@@ -1,0 +1,12 @@
+Feature: Visualización de gráficos de progreso
+
+  Scenario: Mostrar gráficos de progreso semanal y mensual
+    Given que el usuario ha iniciado sesión en su cuenta
+    And ha registrado actividades previamente
+    When accede a la sección de “Progreso” en la aplicación
+    Then se muestran gráficos interactivos con el avance semanal y mensual del usuario
+
+  Scenario: Visualizar métricas específicas en los gráficos
+    Given que el usuario se encuentra en la sección de “Progreso”
+    When selecciona una métrica como calorías quemadas, distancia recorrida o tiempo de actividad
+    Then la aplicación actualiza el gráfico para reflejar esa métrica específica
